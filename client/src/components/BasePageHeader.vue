@@ -4,7 +4,7 @@
             <BasePageHeaderUserProfile />
             <BasePageHeaderNavigation class="push-flex-to-right" />
 
-            <h1>adasdasd</h1>
+            <h1>adasdd</h1>
         </div>
     </div>
 </template>
