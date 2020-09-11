@@ -3,8 +3,6 @@
         <div>
             <BasePageHeaderUserProfile />
             <BasePageHeaderNavigation class="push-flex-to-right" />
-
-            <h1>adasdd</h1>
         </div>
     </div>
 </template>

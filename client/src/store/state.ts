@@ -17,6 +17,6 @@ export const state: RootState = {
     pickedYear: 0,
     tasks: [
         { title: 'Set up mongodb', completed: false },
-        { title: 'Draw db model', completed: false }
+        { title: 'Draw db model ffs', completed: false }
     ]
 }
