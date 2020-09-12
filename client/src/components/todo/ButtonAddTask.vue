@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper-button-add-task">
+    <div class="wrapper-button-add-task" v-on:click="sendTaskInsertionRequest()">
         <img src="../../assets/img/icon-plus.svg">
     </div>
 </template>
@@ -7,10 +7,13 @@
 <script lang='ts'>
     import Vue from 'vue';
     import { Component } from 'vue-property-decorator';
+    import { SEND_INSERT_TASK_REQUEST } from '../../store/mutation-types';
 
     @Component({})
     export default class ButtonAddTask extends Vue {
-
+        sendTaskInsertionRequest(): void {
+            this.$store.commit(SEND_INSERT_TASK_REQUEST);
+        }
     }
 </script>
 

@@ -14,6 +14,14 @@ export const mutations: MutationTree<RootState> = {
     
     [mutationTypes.INSERT_TASK](state: RootState, task: Task): void {
         state.tasks.push(task);
+    },
+
+    [mutationTypes.SEND_INSERT_TASK_REQUEST](state: RootState): void {
+        state.taskInsertionRequested = true;
+    },
+
+    [mutationTypes.STOP_INSERT_TASK_REQUEST](state: RootState): void {
+        state.taskInsertionRequested = false;
     }
 }
 

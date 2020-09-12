@@ -9,6 +9,7 @@ export interface RootState {
     pickedMonth: number;
     pickedYear: number;
     tasks: Array<Task>;
+    taskInsertionRequested: boolean;
 }
 
 export const state: RootState = {
@@ -18,5 +19,6 @@ export const state: RootState = {
     tasks: [
         { title: 'Set up mongodb', completed: false },
         { title: 'Draw db model', completed: false }
-    ]
+    ],
+    taskInsertionRequested: false
 }

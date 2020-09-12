@@ -5,7 +5,7 @@
                 <h1>TODAY</h1>
                 <ButtonAddTask class="button-add-task"/>
             </div>
-            <ToDoList class="to-do-list"/>
+            <ToDoList class="to-do-list" />
        </div>
    </div>
 </template>

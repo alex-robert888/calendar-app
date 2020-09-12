@@ -7,6 +7,19 @@
         > 
             <span class="to-do-list-task-span">{{task.title}}</span>
         </ToDoListTask>
+
+        <!-- ToDoListTask for inserting new task -->
+        <ToDoListTask 
+            class="to-do-list-task"
+            v-if="this.$store.state.taskInsertionRequested"
+        >
+            <input 
+                type="text" 
+                class="to-do-list-task-input-text"
+                v-model="this.newTaskTitle"
+                v-on:keyup.enter="insertTask()"    
+            >
+        </ToDoListTask>    
     </div>
 </template>
 
@@ -14,6 +27,7 @@
     import Vue from 'vue';
     import { Component } from 'vue-property-decorator';
     import ToDoListTask from './ToDoListTask.vue' 
+    import { INSERT_TASK, STOP_INSERT_TASK_REQUEST} from '../../store/mutation-types';
 
     @Component({
         components: {
@@ -21,7 +35,16 @@
         }
     })
     export default class ToDoList extends Vue {
-        
+        private newTaskTitle = "";
+
+        insertTask(): void {
+            alert(this.newTaskTitle);
+            if (this.newTaskTitle === "") {
+                return;
+            }
+            this.$store.commit(INSERT_TASK, { title: this.newTaskTitle, completed: false });
+            this.$store.commit(STOP_INSERT_TASK_REQUEST);
+        }
     }
 </script>
 
