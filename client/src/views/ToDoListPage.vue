@@ -1,5 +1,7 @@
 <template>
-   <div class="wrapper-to-do-list-page position-center">
+   <div 
+        class="wrapper-to-do-list-page position-center"
+    >
        <div>
             <div>
                 <h1>TODAY</h1>
@@ -15,6 +17,7 @@
     import { Component } from 'vue-property-decorator';
     import ToDoList from '@/components/todo/ToDoList.vue';
     import ButtonAddTask from '@/components/todo/ButtonAddTask.vue'
+    import { SEND_INSERT_TASK_REQUEST } from '../store/mutation-types';
 
     @Component({
         components: {
@@ -23,7 +26,6 @@
         }
     })
     export default class ToDoListPage extends Vue { 
-
     }
 </script>
 

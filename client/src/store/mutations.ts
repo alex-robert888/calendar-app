@@ -22,6 +22,10 @@ export const mutations: MutationTree<RootState> = {
 
     [mutationTypes.STOP_INSERT_TASK_REQUEST](state: RootState): void {
         state.taskInsertionRequested = false;
+    },
+
+    [mutationTypes.DELETE_TASK](state: RootState, index: number): void {
+        state.tasks.splice(index, 1);
     }
 }
 
