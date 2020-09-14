@@ -28,7 +28,6 @@
         @Prop() index!: number;
 
         deleteTask(index: number): void {
-            alert(index);
             this.$store.commit(DELETE_TASK, index)
         }
     }

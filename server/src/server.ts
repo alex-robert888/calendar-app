@@ -11,11 +11,14 @@ app.use(express.json());
 app.use(cors());
 app.use(volleyball);
 
+// Set up routers
+const auth = require('./routes/auth');
+app.use('/auth', auth);
+
 // Requests handling
 app.get('/', (req, res) => {
-    res.json({'status': '✅'});
+    res.redirect('/auth/login');
 });
-
 
 // Error handling
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
@@ -24,7 +27,7 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
 });
 
 // Listen on port
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });

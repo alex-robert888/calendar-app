@@ -17,7 +17,6 @@
     import { Component } from 'vue-property-decorator';
     import ToDoList from '@/components/todo/ToDoList.vue';
     import ButtonAddTask from '@/components/todo/ButtonAddTask.vue'
-    import { SEND_INSERT_TASK_REQUEST } from '../store/mutation-types';
 
     @Component({
         components: {
