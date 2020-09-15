@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>GITHUB</h1>
         <BasePageHeader />
         <router-view />
     </div>
