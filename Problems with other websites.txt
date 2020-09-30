@@ -1,0 +1,5 @@
+
+* It is complicated to pospone, split events into two, three parts when something unexpected happens and I must stop.
+* For the above problem, it would be amazing if I could implement a voice recognition.
+* First ask the user to enter his resolutions, thoughts.
+* Review and change up some code 

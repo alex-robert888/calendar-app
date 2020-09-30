@@ -1,0 +1,4 @@
+* [] Have multiple lists
+* [] Select item from multiple lists for today's todo list.
+* [] Voice recognition
+
